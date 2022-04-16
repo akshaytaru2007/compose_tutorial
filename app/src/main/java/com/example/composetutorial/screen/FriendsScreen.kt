@@ -12,22 +12,23 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 
 @Composable
-fun SplashScreen(navController: NavHostController) {
+fun FriendsScreen(navController: NavHostController) {
     Column(
         modifier = Modifier
-            .background(color = Color.Magenta)
+            .background(color = Color.White)
             .fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Text("Splash Screen", color = Color.Black, fontSize = 18.sp)
+        Text("Friends Screen", color = Color.Black, fontSize = 20.sp)
     }
 }
 
-//@Composable
-//@Preview(showBackground = true)
-//fun SplashScreenPreview() {
-//    SplashScreen()
-//}
+@Composable
+@Preview(showBackground = true)
+fun FriendsScreenPreview() {
+    FriendsScreen(navController = rememberNavController())
+}
