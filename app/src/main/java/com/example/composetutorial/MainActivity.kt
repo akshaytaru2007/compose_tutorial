@@ -7,7 +7,7 @@ import androidx.compose.runtime.getValue
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.compose.rememberNavController
 import com.example.composetutorial.navigation.navgraphs.SetupNavGraph
-import com.example.composetutorial.ui.theme.ComposeTutorialTheme
+import com.example.composetutorial.ui.theme.AppCustomComposeTheme
 import com.example.composetutorial.viewmodel.MainActivityViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -27,7 +27,7 @@ class MainActivity : ComponentActivity() {
         }
 
         setContent {
-            ComposeTutorialTheme {
+            AppCustomComposeTheme {
                 val startDestination by mainActivityViewModel.startDestination
                 val navController = rememberNavController()
                 val bottomNavController = rememberNavController()

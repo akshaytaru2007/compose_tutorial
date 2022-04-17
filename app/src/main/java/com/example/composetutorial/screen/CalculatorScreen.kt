@@ -13,12 +13,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.example.composetutorial.ui.theme.CustomThemeManager
 
 @Composable
 fun CalculatorScreen(navController: NavHostController) {
     Column(
         modifier = Modifier
-            .background(color = Color.White)
+            .background(color = CustomThemeManager.colors.fabIconColor)
             .fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
