@@ -34,6 +34,7 @@ fun LoginScreen(navController: NavHostController, viewModel: LoginViewModel? = h
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
+        // Abhishek: Use the default text from strings resource
         Text("Login Screen", color = Color.Black, fontSize = 18.sp)
         OutlinedButton(onClick = {
             Log.d(TAG, "LoginScreen: Button clicked")
@@ -43,11 +44,13 @@ fun LoginScreen(navController: NavHostController, viewModel: LoginViewModel? = h
 
 
         }) {
+            // Abhishek: Use the default text from strings resource
             Text(text = "Login")
 
         }
         Spacer(modifier = Modifier.height(10.dp))
         ClickableText(
+            // Abhishek: Use the default text from strings resource
             text = AnnotatedString(text = "Terms And Condition"),
             onClick = {
                 navController.navigate(Screen.TermsAndConditionScreen.route)
@@ -58,6 +61,7 @@ fun LoginScreen(navController: NavHostController, viewModel: LoginViewModel? = h
     }
 }
 
+// Abhishek: Preview method can be made private
 @Composable
 @Preview(showBackground = true)
 fun LoginScreenPreview() {
