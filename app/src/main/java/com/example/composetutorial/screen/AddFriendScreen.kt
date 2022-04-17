@@ -27,6 +27,7 @@ fun AddFriendScreen(navController: NavHostController) {
     }
 }
 
+// Abhishek: Can be made AddFriendScreenPreview function private
 @Composable
 @Preview(showBackground = true)
 fun AddFriendScreenPreview() {
