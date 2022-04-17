@@ -20,6 +20,7 @@ import com.example.composetutorial.navigation.navgraphs.BottomNavGraph
 
 private const val TAG = "MainScreen"
 
+// Abhishek: Provide private access specifier for composables not used outside.
 val screen = listOf(
     BottomNavigationScreen.HomeScreen,
     BottomNavigationScreen.AllDrugScreen,
@@ -87,6 +88,7 @@ fun BottomBar(navController: NavHostController) {
     }
 }
 
+// Abhishek: Do composables fuctions return? Use extension fucntions logic in a separate file. Create separate class for reusable composables.
 @Composable
 fun RowScope.AddItem(
     screen: BottomNavigationScreen,
@@ -115,6 +117,7 @@ fun RowScope.AddItem(
     )
 }
 
+// Abhishek: Do composables fuctions return? Use extension fucntions logic in a separate file. Create separate class for reusable composables.
 @Composable
 fun NavController.destinationEntryAsState(): State<NavigationDestinationEntry> {
     val navDestinationEntry = remember {
@@ -164,10 +167,12 @@ fun NavController.bottomBatVisibilityAsState(): State<Boolean> {
     return bottomBarVisible
 }
 
-
+// Abhishek: showBackButton(), getDestinationTitle() - try to keep these methods on viewmodel and separate UI logic from business logic. 
 fun showBackButton(route: String?): Boolean =
     screen.firstOrNull() { it.route == route }?.route != route
 
+// Abhishek: showBackButton(), getDestinationTitle() - try to keep these methods on viewmodel and separate UI logic from business logic.
+// Abhishek: Create separate state class in viewmodel specific to it and access via objects
 fun getDestinationTitle(route: String?): String {
     val screen = listOf(
         BottomNavigationScreen.HomeScreen,
