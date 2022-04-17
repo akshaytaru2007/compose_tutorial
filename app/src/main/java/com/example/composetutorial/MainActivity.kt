@@ -12,6 +12,7 @@ import com.example.composetutorial.viewmodel.MainActivityViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
+// Abhishek: Move this file to proper architecture module specific package.
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
