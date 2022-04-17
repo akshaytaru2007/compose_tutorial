@@ -13,6 +13,8 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+// Abhishek: Move this viewmodel to architecture specific module
+
 class MainActivityViewModel
 @Inject
 constructor(private val dataStoreRepository: DataStoreRepository) : ViewModel() {
