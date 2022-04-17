@@ -9,6 +9,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+// Abhishek: Move the viewmodel as per the architecture specific module.
 @HiltViewModel
 class LoginViewModel @Inject constructor(private val dataStoreRepository: DataStoreRepository) : ViewModel() {
     private val TAG = "LoginViewModel"
