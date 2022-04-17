@@ -49,6 +49,7 @@ android {
     }
 }
 
+// Abhishek: Mode the dependencies implementation and version in a separate file. Refer dependency by name only. It is just to make code clean and readable.
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.7.0'
