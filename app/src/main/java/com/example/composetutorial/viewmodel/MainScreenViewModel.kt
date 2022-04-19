@@ -19,6 +19,9 @@ class MainScreenViewModel @Inject constructor(private val dataStoreRepository: D
             BottomNavigationScreen.FriendsScreen,
             BottomNavigationScreen.HomeInternalScreen,
             BottomNavigationScreen.AddFriendScreen,
+            BottomNavigationScreen.Settings,
+            BottomNavigationScreen.ContactUs,
+            BottomNavigationScreen.AboutUs,
         )
         return screen.firstOrNull { it.route == route }?.title ?: ""
     }

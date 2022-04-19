@@ -36,5 +36,16 @@ fun BottomNavGraph(navController: NavHostController) {
         composable(route = BottomNavigationScreen.AddFriendScreen.route) {
             AddFriendScreen(navController = navController)
         }
+
+        composable(route = BottomNavigationScreen.Settings.route) {
+            SettingsScreen(navController = navController)
+        }
+
+        composable(route = BottomNavigationScreen.AboutUs.route) {
+            AboutUsScreen(navController = navController)
+        }
+        composable(route = BottomNavigationScreen.ContactUs.route) {
+            ContactUsScreen(navController = navController)
+        }
     }
 }

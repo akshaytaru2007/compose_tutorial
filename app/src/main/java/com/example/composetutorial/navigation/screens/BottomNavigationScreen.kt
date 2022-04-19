@@ -61,4 +61,29 @@ sealed class BottomNavigationScreen(
         selectedContentColor = Color.White,
         unselectedContentColor = Color.LightGray
     )
+
+    //Nav Drawer item
+    object Settings : BottomNavigationScreen(
+        route = "drawer_settings",
+        title = "Setting",
+        icon = Icons.Filled.Settings,
+        selectedContentColor = Color.White,
+        unselectedContentColor = Color.LightGray
+    )
+
+    object AboutUs : BottomNavigationScreen(
+        route = "drawer_about_us",
+        title = "About Us",
+        icon = Icons.Filled.Info,
+        selectedContentColor = Color.White,
+        unselectedContentColor = Color.LightGray
+    )
+
+    object ContactUs : BottomNavigationScreen(
+        route = "drawer_contact_us",
+        title = "Contact Us",
+        icon = Icons.Filled.Phone,
+        selectedContentColor = Color.White,
+        unselectedContentColor = Color.LightGray
+    )
 }

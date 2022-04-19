@@ -46,13 +46,6 @@ fun HomeScreen(navController: NavHostController, viewModel: HomeViewModel = hilt
         Spacer(modifier = Modifier.height(10.dp))
         OutlinedButton(
             onClick = {
-//                CustomThemeManager.customTheme =
-//                    if (CustomThemeManager.customTheme == ThemeMode.DARK) {
-//                        ThemeMode.LIGHT
-//                    } else {
-//                        ThemeMode.DARK
-//                    }
-
                 viewModel.toggleThemeMode()
             },
         ) {
