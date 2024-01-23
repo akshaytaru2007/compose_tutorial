@@ -2,8 +2,10 @@ package com.example.composetutorial.navigation.navgraphs
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.navArgument
 import com.example.composetutorial.navigation.screens.BottomNavigationScreen
 import com.example.composetutorial.screen.*
 
@@ -29,8 +31,15 @@ fun BottomNavGraph(navController: NavHostController) {
             FriendsScreen(navController = navController)
         }
 
-        composable(route = BottomNavigationScreen.HomeInternalScreen.route) {
-            HomeInternalScreen(navController = navController)
+        composable(
+            route = BottomNavigationScreen.HomeInternalScreen.route,
+            arguments = listOf(navArgument("selected_id") {
+                defaultValue = -1
+                type = NavType.IntType
+            })
+        ) {backStackEntry ->
+            val selectedId = backStackEntry.arguments?.getInt("selected_id") ?: -1
+            HomeInternalScreen(navController = navController, selectedId = selectedId)
         }
 
         composable(route = BottomNavigationScreen.AddFriendScreen.route) {

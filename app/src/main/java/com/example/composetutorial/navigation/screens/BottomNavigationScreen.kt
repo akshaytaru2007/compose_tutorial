@@ -47,7 +47,7 @@ sealed class BottomNavigationScreen(
     )
 
     object HomeInternalScreen : BottomNavigationScreen(
-        route = "home_internal_screen",
+        route = "home_internal_screen/{selected_id}",
         title = "Home Internal Screen",
         icon = Icons.Default.Add,
         selectedContentColor = Color.White,

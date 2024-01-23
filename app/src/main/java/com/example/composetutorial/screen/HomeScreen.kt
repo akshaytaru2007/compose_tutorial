@@ -16,6 +16,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.composetutorial.navigation.screens.BottomNavigationScreen
 import com.example.composetutorial.ui.theme.CustomThemeManager
 import com.example.composetutorial.viewmodel.HomeViewModel
+import java.util.Random
 
 @Composable
 fun HomeScreen(navController: NavHostController, viewModel: HomeViewModel = hiltViewModel()) {
@@ -30,7 +31,11 @@ fun HomeScreen(navController: NavHostController, viewModel: HomeViewModel = hilt
         Text("Home Screen", color = CustomThemeManager.colors.textColor, fontSize = 18.sp)
         OutlinedButton(
             onClick = {
-                navController.navigate(BottomNavigationScreen.HomeInternalScreen.route)
+                val number = Random().nextInt()
+                navController.navigate(BottomNavigationScreen.HomeInternalScreen.route.replace(
+                    oldValue = "{selected_id}",
+                    newValue = number.toString()
+                ))
             },
         ) {
             Text(text = "Go to next screen")

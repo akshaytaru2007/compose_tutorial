@@ -15,7 +15,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 
 @Composable
-fun HomeInternalScreen(navController: NavHostController) {
+fun HomeInternalScreen(navController: NavHostController, selectedId: Int) {
     Column(
         modifier = Modifier
             .background(color = Color.White)
@@ -23,12 +23,12 @@ fun HomeInternalScreen(navController: NavHostController) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Text("Home Internal Screen", color = Color.Black, fontSize = 18.sp)
+        Text("Home Internal Screen: $selectedId", color = Color.Black, fontSize = 18.sp)
     }
 }
 
 @Composable
 @Preview(showBackground = true)
 fun HomeInternalScreenPreview() {
-    HomeInternalScreen(navController = rememberNavController())
+    HomeInternalScreen(navController = rememberNavController(), selectedId = -1)
 }
